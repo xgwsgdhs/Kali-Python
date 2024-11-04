@@ -72,7 +72,7 @@ def proxy_handler(client_socket, remote_host, remote_port,receive_first):
             client_socket.send(remote_buffer)
             print("[<==] Sent to localhost.")
 
-        if not len(local_buffe) or not len(remote_buffer):
+        if not len(local_buffer) or not len(remote_buffer):
             client_socket.close()
             remote_socket.close()
             print("[*] No more data. Closing connection.")
